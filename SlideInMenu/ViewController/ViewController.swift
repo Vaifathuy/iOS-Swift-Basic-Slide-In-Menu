@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     
     private func setupBlackView(){
         self.blackView.frame = self.view.frame
-        navigationController?.view.insertSubview(self.blackView, aboveSubview: self.menuVC.view)
+        //navigationController?.view.insertSubview(self.blackView, aboveSubview: self.menuVC.view)
+        navigationController?.view.insertSubview(self.blackView, belowSubview: self.menuVC.view)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDismissMenu(gesture:)))
         self.blackView.addGestureRecognizer(tapGesture)
     }
